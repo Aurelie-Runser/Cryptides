@@ -1,0 +1,10 @@
+:root{
+    --c-dark: #242038;
+    --c-main_dark: #725AC1;
+    --c-main : #8D86C9;
+    --c-main_light: #CAC4CE;
+    --c-light: #F7ECE1;
+
+    --f-main: "Cabin", sans-serif;
+    --f-title: "Bilbo Swash Caps";    
+}

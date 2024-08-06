@@ -1,0 +1,10 @@
+<a href="{{path('cryptide.show', {slug: cry.slug})}}">
+    <div class="card">
+        <div class="card__txt">
+            <h3 class="card__txt--name">{{ cry.name }}</h3>
+        </div>
+        <div class="card__img">
+            {% include 'components/cryptides/' ~ cry.img ~ '.svg.twig' ignore missing %}
+        </idv>
+    </div>
+</a>

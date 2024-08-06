@@ -1,0 +1,93 @@
+.content{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.content__background{
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.content__page{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.listeCryptides__liste{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.apropos__link{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: block;
+}
+
+.apropos{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 25px;
+    backdrop-filter: blur(4px);
+}
+
+.apropos p{
+    margin: 1rem 0;
+}
+
+.apropos ul{
+    list-style: inside;
+}
+
+.apropos__me{
+    font-size: 1.5rem; 
+    font-weight: bold;
+    line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .content__background{
+        transform-origin: bottom;
+        transform: scale(3.5);
+    }
+
+    .content__page{
+        min-height: 75vh;
+        height: fit-content;
+        align-items: center;
+    }
+    
+    .listeCryptides__liste{
+        top: 30%;
+        width: 95%;
+        height: 100%;
+        gap: 40px;
+        padding: 50px 25px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    .apropos{
+        max-width: 95%;
+    }
+}

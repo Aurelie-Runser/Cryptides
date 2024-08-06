@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+/* @import "./reset.css"; */
+@import "./variables.css";
+@import "./hero.css";
+@import "./section.css";
+@import "./cryptideFiche.css";
+@import "./menu.css";
+@import "./card.css";
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background: var(--c-dark);
+  width: 100vw;
+  overflow-x: hidden !important;
+  color: var(--c-light);
+}
+
+h1,
+h2,
+h3{
+    font-family: var(--f-title);
+    font-weight: normal;
+    color: var(--c-main_dark);
+    text-align: center;
+    margin: auto;
+}
+
+h1{
+    font-size: 9rem;
+}
+
+h2{
+    font-size: 5rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+ul{
+    list-style: none;
+}
+
+p, span, li, a{
+    font-family: var(--f-main);
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+a{
+    font-size: inherit;
+    font-weight: bold;
+    color: var(--c-light);
+    text-decoration: underline;
+    transition: all ease-in-out 0.2s;
+}
+
+a:hover{
+    color: var(--c-main_light);
+}
+
+::selection{
+    background: var(--c-main);
+    color: var(--c-dark)
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 6rem;
+    }
+    
+    h2{
+        font-size: 4rem;
+    }
+    
+    h3{
+        font-size: 3rem;
+    }
+    
+    p, span, li{
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+}

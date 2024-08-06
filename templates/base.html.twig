@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryptides {% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Fonction pour vérifier si l'URL contient un certain paramètre
+                function hasQueryParameter(param) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.has(param);
+                }
+
+                if (window.location.pathname !== '/' || hasQueryParameter('continent')) {
+                    // Vérifier si l'élément avec l'ID 'scroll-target' existe
+                    const scrollTarget = document.getElementById('scroll-target').scrollIntoView();;
+                }
+            });
+        </script>
+        
+    </head>
+    <body>
+        {% include "components/hero.html.twig" %}
+
+        <div class="content">
+            <main id="scroll-target">
+                {% include "components/menu.html.twig" %}
+                <div class="content__page">
+                    {% block body %}{% endblock %}
+                </div>
+            </main>
+            <img class="content__background" src="/img/deco/foret2.svg" alt="image d'une silhouette d'une forêt">
+            <a class="apropos__link" href="{{ path('apropos') }}">À Propos</a>
+        </div>
+    </body>
+</html>

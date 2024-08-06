@@ -1,0 +1,58 @@
+.hero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--c-main_dark);
+    overflow: hidden;
+}
+
+.hero__background{
+    z-index: 0;
+    position: absolute;
+    bottom: -1px;
+    left: -2px;
+    width: calc(100vw + 2px);
+}
+
+.hero__content{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+}
+
+.hero__content--title{
+    color: var(--c-dark);
+}
+
+.hero__content--txt,
+.cryptideFiche__txt--description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 25px;
+    backdrop-filter: blur(4px);
+    color: var(--c-light);
+    text-align: center;
+}
+
+@media only screen and (max-width: 530px) {
+    .hero__background{
+        transform-origin: bottom left;
+        transform: scale(3);
+        bottom: -20px;
+    }
+    
+    .hero__content{
+        top: 30%;
+        width: 95%;
+    }
+
+    .hero__content--txt{
+        margin: 2rem 0;
+    }
+}

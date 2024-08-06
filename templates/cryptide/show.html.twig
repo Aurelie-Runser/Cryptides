@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}: {{ cryptide.name }}{% endblock %}
+
+{% block body %}
+<div class="cryptideFiche">
+    <div class="cryptideFiche__img">
+        {% include 'components/cryptides/' ~ cryptide.img ~ '.svg.twig' ignore missing %}
+    </div>
+
+    <div class="cryptideFiche__txt">
+        <h2>{{ cryptide.name }}</h2>
+        <ul>
+            <li><span class="cryptideFiche__txt--donnee">Continent :</span> {{cryptide.idContinent.nom}}</li>
+            {% if (cryptide.pays != "")%}
+                <li><span class="cryptideFiche__txt--donnee">Pays :</span> {{cryptide.pays}}</li>
+            {% endif %}
+        </ul>
+        <p class="cryptideFiche__txt--description">{{ cryptide.description }}</p>
+    </div>
+</div>
+{% endblock %}

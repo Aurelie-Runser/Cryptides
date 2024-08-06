@@ -1,0 +1,9 @@
+<nav class="menu" id="scroll-target">
+    {% for cont in listeContinent %}
+        {% set continentChooseStyle = (cont.slug == continentChoose) ? 'choose' : '' %}
+        
+        <a class="menu__item {{continentChooseStyle}}" href="{{path('home')}}?continent={{cont.slug}}">
+            {% include 'components/continents/' ~ cont.img ~ '.svg.twig'%}
+        </a>
+    {% endfor %}
+</nav>

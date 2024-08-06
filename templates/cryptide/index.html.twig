@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}: Liste de Cryptides{% endblock %}
+
+{% block body %}
+
+    <ul class="listeCryptides__liste">
+        {% for cry in listeCryptide %}
+            <li>
+                {% include "components/card.html.twig" %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
